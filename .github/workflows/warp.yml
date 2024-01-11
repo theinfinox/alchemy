@@ -13,7 +13,7 @@ jobs:
       - name: Set up Cloudflare WARP
         uses: Boostport/setup-cloudflare-warp@v1
         with:
-          organization: your-organization
+          organization: theinfinox.cloudflareaccess.com
           auth_client_id: ${{ secrets.CLOUDFLARE_AUTH_CLIENT_ID }}
           auth_client_secret: ${{ secrets.CLOUDFLARE_AUTH_CLIENT_SECRET }}
 
