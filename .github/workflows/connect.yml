@@ -27,3 +27,8 @@ jobs:
           timestamp=$(date +"%Y-%m-%d %T") 
           echo "Workflow executed on runner at $timestamp" >> /root/actions-runner/hello.log
           cat /root/actions-runner/hello.log
+      - name: Alchemy Sync 
+        run: |
+          cd /root/docker-nginx/html/
+          touch flag.txt
+
