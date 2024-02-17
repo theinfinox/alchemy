@@ -25,4 +25,4 @@ jobs:
       - name: Log success on the runner 
         run: |
           timestamp=$(date +"%Y-%m-%d %T") 
-          echo "Workflow executed on runner at $timestamp" >> /path/to/log/file.log
+          echo "Workflow executed on runner at $timestamp" >> /root/actions-runner/file.log
