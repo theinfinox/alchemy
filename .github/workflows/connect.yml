@@ -1,0 +1,28 @@
+name: Connection Check and Logging
+on: [push]
+jobs:
+  check_connection:
+    runs-on: [self-hosted, linux, ARM64]
+    steps:
+      - name: Check Connection
+        run: echo "Connection successful"
+  
+  logging:
+    needs: check_connection
+    runs-on: [self-hosted, linux, ARM64]
+    steps:
+      - name: Debug Runner Information
+        run: |
+          uname -a
+          df -h
+          free -h
+          cat /proc/cpuinfo
+          cat /proc/meminfo
+          ip addr
+          ip route
+          ping github.com -c 4
+
+      - name: Log success on the runner 
+        run: |
+          timestamp=$(date +"%Y-%m-%d %T") 
+          echo "Workflow executed on runner at $timestamp" >> /path/to/log/file.log
