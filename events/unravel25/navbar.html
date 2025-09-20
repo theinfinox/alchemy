@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartoon Mobile Navbar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      background: #fdf6e3;
+      font-family: "Comic Sans MS", "Baloo 2", cursive, sans-serif;
+    }
+
+    /* Cartoon mobile navbar */
+    .navbar-mobile {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffe66d;
+      border: 3px solid #222;
+      border-radius: 40px;
+      width: 320px;
+      height: 65px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      box-shadow: 5px 5px 0 #222;
+      z-index: 9999;
+    }
+
+    .nav-item {
+      position: relative;
+      font-size: 24px;
+      color: #222;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-item.active {
+      color: #fff;
+    }
+
+    /* Bubble effect for active icon */
+    .nav-item.active::after {
+      content: "";
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 55px;
+      height: 55px;
+      background: #ff8a5b;
+      border: 3px solid #222;
+      border-radius: 50%;
+      z-index: -1;
+      box-shadow: 3px 3px 0 #222;
+      animation: bounce 0.4s ease;
+    }
+
+    .nav-item.active i {
+      color: white;
+      transform: translateY(-8px);
+    }
+
+    @keyframes bounce {
+      0% { transform: translateX(-50%) scale(0.5); opacity: 0; }
+      100% { transform: translateX(-50%) scale(1); opacity: 1; }
+    }
+
+    /* Decorative SVGs */
+    .nav-decor {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      pointer-events: none;
+    }
+    .star {
+      top: -20px;
+      left: -15px;
+    }
+    .sparkle {
+      top: -18px;
+      right: -15px;
+    }
+
+    @media (min-width: 769px) {
+      .navbar-mobile {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar-mobile">
+    <div class="nav-item active"><i class="fas fa-home"></i></div>
+    <div class="nav-item"><i class="fas fa-users"></i></div>
+    <div class="nav-item"><i class="fas fa-calendar-alt"></i></div>
+    <div class="nav-item"><i class="fas fa-envelope"></i></div>
+
+    <!-- Decorative SVGs -->
+    <svg class="nav-decor star" viewBox="0 0 24 24" fill="gold">
+      <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.896 
+               1.48 8.298L12 18.896 4.584 23.5l1.48-8.298L0 
+               9.306l8.332-1.151z"/>
+    </svg>
+    <svg class="nav-decor sparkle" viewBox="0 0 24 24" fill="pink">
+      <path d="M12 2l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/>
+    </svg>
+  </div>
+
+  <script>
+    const items = document.querySelectorAll(".nav-item");
+    items.forEach(item => {
+      item.addEventListener("click", () => {
+        items.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>

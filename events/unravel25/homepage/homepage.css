@@ -1,0 +1,331 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+.logo img {
+    width: 15vw;
+    height: auto;
+}
+
+.date {
+    text-align: center;
+    transform: translateY(170px);
+    font-size: 30px;
+    -webkit-transform: translateY(170px);
+    -moz-transform: translateY(170px);
+    -ms-transform: translateY(170px);
+    -o-transform: translateY(170px);
+}
+
+.navbar {
+    position: relative;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5rem;
+    padding-bottom: 0;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-btn {
+    color: #050505;
+    border-radius: 2rem 2rem 2rem 2rem / 3rem 3rem 3rem 3rem;
+    /* Oval shape */
+    padding: 0.7rem 2.5rem;
+    background: #c1c586;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    /* Stronger drop shadow */
+    font-weight: bold;
+    z-index: 100;
+    text-decoration: none;
+}
+
+.nav-btn1 {
+    color: #000000;
+    border-radius: 2rem 2rem 2rem 2rem / 3rem 3rem 3rem 3rem;
+    /* Oval shape */
+    padding: 0.7rem 2.5rem;
+    background: #c1c586;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+    /* Stronger drop shadow */
+    font-weight: bold;
+    z-index: 101;
+    text-decoration: none;
+}
+
+.adithyan {
+    transform: translateY(150px);
+    font-size: 2vw;
+    background: rgb(209, 214, 179)
+}
+
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    z-index: 10;
+
+}
+
+nav ul li a {
+    color: rgb(224, 230, 178);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    padding: 2rem;
+    min-height: calc(100vh - 80px);
+}
+
+.stars {
+    position: absolute;
+    top: 3%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.rainbow {
+    top: 20%;
+    left: 7%;
+    transform: translate(-25%);
+    width: auto;
+    height: 800px;
+    /*Adjustheightasneeded*/z-index: -1;
+    -webkit-transform: translate(-25%);
+    -moz-transform: translate(-25%);
+    -ms-transform: translate(-25%);
+    -o-transform: translate(-25%);
+}
+
+
+.rainbow-r {
+    width: 73.5625em;
+    position: absolute;
+    top: -100%;
+    bottom: auto;
+    left: auto;
+    right: -15.8em;
+    overflow: hidden;
+    clip-path: inset(0 5% 0 0);
+}
+
+.cloud1 {
+    width: 38.8125em;
+    position: absolute;
+    top: 2.2em;
+    bottom: auto;
+    left: -18.9em;
+    right: auto;
+    z-index: 2;
+}
+
+.cloud2 {
+    width: 25.96875em;
+    /* Half of original width */
+    position: absolute;
+    top: 18.8em;
+    bottom: auto;
+    left: auto;
+    right: -13em;
+    overflow: hidden;
+    /* Ensures only half is visible if the image is wider */
+    clip-path: inset(0 50% 0 0);
+    /* Shows left half of the cloud */
+}
+
+.flower {
+    z-index: 3;
+    width: 23.7119em;
+    max-width: none;
+    position: absolute;
+    top: 75%;
+    bottom: -5.9em;
+    left: auto;
+    right: -5.8em;
+    overflow: hidden;
+    clip-path: inset(0 25% 0 0);
+}
+
+.bug {
+    position: absolute;
+    bottom: -6.7em;
+    left: 7em;
+    right: auto;
+    width: 15.5em;
+}
+
+.moon {
+    width: 9.125em;
+    position: absolute;
+    top: 4.5em;
+    bottom: auto;
+    left: 22.5em;
+    right: auto;
+}
+
+.peach {
+    position: absolute;
+    left: 63%;
+    top: 77%;
+    transform: translate(-50%, -50%);
+    width: 5em;
+    /* Adjust as needed */
+    z-index: 2;
+}
+
+.pencil {
+    z-index: 2;
+    width: 6.1875em;
+    position: absolute;
+    top: auto;
+    bottom: -7.6em;
+    left: auto;
+    right: 40.8em;
+}
+
+.jar {
+    width: 7.9375em;
+    position: absolute;
+    top: 16em;
+    bottom: auto;
+    left: 13em;
+    right: auto;
+}
+
+/* PURE Stack Styles */
+.pure-stack-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 200px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pure-frame {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transform: scale(1.3);
+    transition: transform 0.2s ease-out;
+}
+
+.pure-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.pure-frame:nth-child(1) {
+    animation-delay: 0s;
+
+}
+
+.pure-frame:nth-child(2) {
+    animation-delay: 0s;
+}
+
+.pure-frame:nth-child(3) {
+    animation-delay: 0s;
+}
+
+.pure-frame:nth-child(4) {
+    animation-delay: 0s;
+}
+
+@keyframes pureFrameAnimation {
+
+    0%,
+    20% {
+        opacity: 1;
+        transform: scale(1) rotate(var(--rotation, 0deg)) translate(var(--x, 0px), var(--y, 0px));
+    }
+
+    25%,
+    45% {
+        opacity: 1;
+        transform: scale(1) rotate(var(--rotation, 0deg)) translate(var(--x, 0px), var(--y, 0px));
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(var(--rotation, 0deg)) translate(var(--x, 0px), var(--y, 0px));
+    }
+}
+
+.pure-frame:nth-child(1) {
+    z-index: 4;
+}
+
+.pure-frame:nth-child(2) {
+    z-index: 3;
+
+}
+
+.pure-frame:nth-child(3) {
+    z-index: 2;
+    /* transform: scale(0.90);  Removed to allow JS animation */
+}
+
+.pure-frame:nth-child(4) {
+    z-index: 1;
+    /* transform: scale(0.85);  Removed to allow JS animation */
+}
+
+/* Location text */
+.location-text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: white;
+    z-index: 6;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pure-stack-container {
+        width: 90vw;
+        height: 120px;
+    }
+
+    .location-text {
+        font-size: 1.2rem;
+        top: 30%;
+    }
+}

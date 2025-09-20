@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Speaker card — working avatar ring</title>
+
+    <!-- Font Awesome (for modal socials) -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+  #speakers-section {
+  font-family: "Poppins", sans-serif;
+  background: #fdf5c9; /* light yellow */
+  color: #333;
+  padding: 80px 20px;
+  max-width: 1600px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#speakers-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #222;
+}
+
+#speakers-section .speakers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+#speakers-section .speaker {
+  max-width: 320px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+#speakers-section .speaker:hover {
+  transform: translateY(-6px);
+}
+
+#speakers-section .frame {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto 25px;
+}
+#speakers-section .frame-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#speakers-section .frame img.photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 55%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: translate(-50%, -65%);
+  z-index: -1;
+}
+
+#speakers-section .speaker h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #111;
+}
+#speakers-section .speaker p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+  max-width: 280px;
+  margin: auto;
+}
+#speakers-section .star {
+  display: inline-block;
+  margin: 0 6px;
+  font-size: 14px;
+  color: #ffb347;
+}
+#speakers-section .star.purple { color: #a889ff; }
+
+/* Sparkles */
+#speakers-section .sparkle {
+  position: absolute;
+  font-size: 14px;
+  animation: twinkle 2s infinite ease-in-out alternate;
+  opacity: 0.8;
+  pointer-events: none;
+}
+@keyframes twinkle {
+  from { opacity: 0.2; transform: scale(0.8) rotate(0deg); }
+  to { opacity: 1; transform: scale(1.2) rotate(30deg); }
+}
+#speakers-section .sparkle.yellow { color: #ffb347; }
+#speakers-section .sparkle.purple { color: #a889ff; }
+#speakers-section .sparkle.blue   { color: #6ecbff; }
+#speakers-section .sparkle.pink   { color: #ff89c1; }
+
+/* Modal styles */
+#speakers-section .modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+}
+#speakers-section .modal.active {
+  display: flex;
+}
+#speakers-section .modal-content {
+  background: #fffbe9;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+  color: #222;
+  overflow: hidden;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+#speakers-section .modal-content img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+#speakers-section .modal-content h3 {
+  margin: 10px 0;
+}
+#speakers-section .socials {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 20px;
+}
+#speakers-section .socials a {
+  color: #333;
+  transition: color 0.3s;
+}
+#speakers-section .socials a:hover {
+  color: #ffb347;
+}
+#speakers-section .close-btn {
+  position: absolute;
+  top: 12px; right: 12px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #777;
+  transition: color 0.3s;
+  z-index: 10;
+}
+#speakers-section .close-btn:hover { color: #000; }
+
+</style>
+  </head>
+  <body>
+
+    <div class="wrap">
+      <div class="speakers">
+        <!-- card 1 -->
+        <div class="speaker-card" data-id="s1">
+          <div class="avatar">
+            <div class="photo"><img
+                src="https://images.unsplash.com/photo-1545996124-1a2c3a1c8e6b?q=80&w=800&auto=format&fit=crop"
+                alt="Michael Fugoso"></div>
+          </div>
+          <h3>Michael Fugoso</h3>
+          <p>Visual Designer</p>
+        </div>
+
+        <!-- card 2 -->
+        <div class="speaker-card" data-id="s2">
+          <div class="avatar">
+            <div class="photo"><img
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop"
+                alt="Anderson Bluu"></div>
+          </div>
+          <h3>Anderson Bluu</h3>
+          <p>Creative Artist</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal (single reusable, content replaced via JS) -->
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true"
+        aria-labelledby="m-title">
+        <button class="close" id="modalClose"
+          aria-label="Close">&times;</button>
+
+        <div class="socials" id="modalSocials">
+          <!-- social icons inserted here -->
+        </div>
+
+        <div id="modalAvatarArea"></div>
+
+        <h2 id="m-title" style="margin:12px 0 2px;">Name</h2>
+        <h4 id="m-role"
+          style="margin:0 0 12px;color:#ccc;font-weight:400;">Role</h4>
+
+        <div class="details" id="m-bio"
+          style="color:#ddd;line-height:1.6;">
+          Short bio or achievements appear here.
+        </div>
+
+        <a id="m-cta" class="cta" href="#">Get workshop ticket</a>
+      </div>
+    </div>
+    <script src="/speakers/speakers.js"></script>
+  </body>
+</html>

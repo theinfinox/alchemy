@@ -1,0 +1,44 @@
+
+/* footer */
+footer {
+  background: rgb(48, 46, 46);
+  padding: 48px 0;
+  text-align: center;
+  color: white;
+  background-image: url(/footer/svg/svg-image-120.svg);
+}
+
+/* responsive */
+@media(max-width:980px) {
+  .timetable-wrap {
+    grid-template-columns: 1fr
+  }
+
+  .hero h1 {
+    font-size: 44px
+  }
+
+  .marquee {
+    gap: 20px
+  }
+
+  .flip-inner {
+    height: 220px
+  }
+
+  .registration {
+    grid-template-columns: 1fr
+  }
+}
+
+.social-icons a {
+  color: var(--muted);
+  /* or #bbb */
+  transition: color 0.3s, transform 0.2s;
+}
+
+.social-icons a:hover {
+  color: #f8c408;
+  /* your accent color */
+  transform: scale(1.2);
+}

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENIGMA'25</title>
+    <link rel="stylesheet" href="/speakers/speakers.css">
+    <link rel="stylesheet" href="/schedule/styles.css">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/footer/index.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <!-- navbar mobile -->
+    <nav class="navbar-mobile" role="navigation" aria-label="Mobile nav">
+      <svg class="cut" xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <mask id="barMask">
+            <rect id="maskRect" x="0" y="0" width="100%" height="100%"
+              fill="white" rx="30" ry="30" />
+            <circle id="cutCircle" cx="40" cy="0" r="30" fill="black" />
+          </mask>
+        </defs>
+
+        <rect id="bgRect" x="0" y="0" width="100%" height="100%"
+          fill="var(--bar-color)" rx="30" ry="30" mask="url(#barMask)" />
+        <rect x="0.5" y="0.5" width="calc(100% - 1px)" height="calc(100% - 1px)"
+          rx="30" ry="30" fill="none" stroke="rgba(0,0,0,0.06)" />
+      </svg>
+
+      <a class="nav-item active" href="#home" data-icon="" aria-label="Home"><i
+          class="fas fa-home"></i></a>
+      <a class="nav-item" href="#speakers-section" data-icon=""
+        aria-label="Speakers"><i class="fas fa-users"></i></a>
+      <a class="nav-item" href="#schedule-section" data-icon=""
+        aria-label="Schedule"><i class="fas fa-calendar-alt"></i></a>
+      <a class="nav-item" href="#footer" data-icon="" aria-label="Contact"><i
+          class="fas fa-envelope"></i></a>
+      <a class="nav-item" href="#footer" data-icon="" aria-label="Contact"><i
+          class="fas fa-times"></i></a>
+    </nav>
+    <script src="/navbar.js"></script>
+
+    <!-- Cartoon Navbar -->
+    <nav class="cartoon-navbar">
+      <div class="logo">
+        <img src="/assets/logo.svg" alt="Logo">
+
+      </div>
+      <ul>
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#speakers-section"><i class="fas fa-user-friends"></i>
+            Speakers</a></li>
+        <li><a href="#schedule-section"><i class="fas fa-calendar-alt"></i>
+            Schedule</a></li>
+        <li><a href="#footer"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="#footer"><i class="fas fa-times"></i> UNRAVEL</a> </li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home" id="home"></section>
+
+    <!-- Speakers Section -->
+    <section id="speakers-section">
+      <h1>Meet Our Speakers</h1>
+
+      <div class="speakers-grid">
+        <!-- Speaker 1 -->
+        <div class="speaker"
+          data-name="Jubin Thaj"
+          data-role="Startup Ecosystem Enabler"
+          data-bio="Jubin Thaj is an award-winning engineer and innovator, creating impactful solutions in agriculture, energy, and technology. From the Pineapple Bundling Machine to the OJES Hybrid Battery, his work blends sustainability with innovation and has earned national recognition."
+          data-img="/speakers/img/jubin.jpg"
+          data-socials='[{"icon":"fab fa-linkedin","url":"https://www.linkedin.com/in/jubin-thaj/"},{"icon":"fab fa-instagram","url":"https://www.instagram.com/jubin.thaj/"}]'>
+
+          <div class="svg-frame">
+            <img class="photo" src="/speakers/img/jubin.jpg"
+              alt="Michael Fugoso">
+            <img class="frame" src="/assets/yellow bubble.svg" alt="frame">
+          </div>
+
+          <h3>Jubin Thaj</h3>
+          <p>Startup Ecosystem Enabler</p>
+        </div>
+
+        <!-- Speaker 2 -->
+        <div class="speaker"
+          data-name="Suroor Mohmd"
+          data-role="CEO - Lytable InfraLabs"
+          data-bio="Former Google Developer Student Club Lead State Community Lead - IEDC IPL 2021."
+          data-img="/speakers/img/suroor.jpg"
+          data-socials='[{"icon":"fab fa-linkedin","url":"#"},{"icon":"fab fa-instagram","url":"https://www.instagram.com/suroor.xyz/"}]'>
+
+          <div class="svg-frame">
+            <img class="photo" src="/speakers/img/suroor.jpg"
+              alt="Suroor Mohmd">
+            <img class="frame" src="/assets/yellow bubble.svg" alt="frame">
+          </div>
+
+          <h3>Suroor Mohmd</h3>
+          <p>CEO - Lytable InfraLabs</p>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" id="modalClose">&times;</span>
+          <img id="modalImg" src alt="speaker photo">
+          <h3 id="modalName">Name</h3>
+          <h4 id="modalRole">Role</h4>
+          <p id="modalBio">Bio goes here.</p>
+          <div class="socials" id="modalSocials"></div>
+        </div>
+      </div>
+    </section>
+    <script src="/speakers/speakers.js"></script>
+
+    <!-- Schedule Section -->
+    <div class="schedule-container" id="schedule-section" style="overflow-y: hidden;">
+      <section class="schedule-section section-20">
+        <svg
+          class="wave-top-svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none">
+          <path
+            d="M0,0 L0,80 Q200,120 400,80 Q600,40 800,80 Q1000,120 1200,80 L1200,0 Z"
+            fill="#2D3748" />
+        </svg>
+        <svg
+          class="wave-bottom-svg"
+          viewBox="0 0 1200 150"
+          preserveAspectRatio="none">
+          <defs>
+            <lineargradient
+              id="waveGradient20"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%">
+              <stop offset="0%" style="stop-color: #ff9a9e; stop-opacity: 1" />
+              <stop offset="50%" style="stop-color: #fecfef; stop-opacity: 1" />
+              <stop
+                offset="100%"
+                style="stop-color: #fecfef; stop-opacity: 1" />
+            </lineargradient>
+          </defs>
+          <path
+            d="M0,150 L0,70 Q200,30 400,70 Q600,110 800,70 Q1000,30 1200,70 L1200,150 Z"
+            fill="url(#waveGradient20)" />
+        </svg>
+        <div class="decorative-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+        <div class="robot-character">
+          <div class="robot-head">
+            <div class="robot-antenna"></div>
+            <div class="robot-eyes">
+              <div class="robot-eye"></div>
+              <div class="robot-eye"></div>
+            </div>
+            <div class="robot-mouth"></div>
+          </div>
+          <div class="robot-body">
+            <div class="robot-arms">
+              <div class="robot-arm left"></div>
+              <div class="robot-arm right"></div>
+            </div>
+          </div>
+          <div class="tentacle-rope">
+            <div class="tentacle"></div>
+          </div>
+        </div>
+        <div class="strawberry-character">
+          <img
+            src="/assets/strawberry.svg"
+            style="width: 100%; max-width: 100px; transform: translateY(20%)" />
+        </div>
+        <div class="main-container">
+          <div class="date-section">
+            <div class="date-number">20</div>
+            <div class="date-day">Saturday</div>
+            <img
+              id="tentacle"
+              src="/assets/enigmaelement.svg"
+              style="
+                position: absolute;
+                bottom: -600px;
+                left: -210px;
+                transform: translateX(20%);
+                width: 600px;
+                z-index: 1;
+              " />
+          </div>
+          <div class="schedule-content">
+            <div class="schedule-columns">
+              <div class="morning-schedule">
+                <h1
+                  style="
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                    color: #000000;
+                  ">
+                  <u style="text-decoration:none;">Morning</u>
+                </h1>
+                <div class="schedule-item">
+                  <div class="time">8:00 AM</div>
+                  <div class="event-info">
+                    <div class="event-title">Registration Opens</div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">9:00 AM - 11:00 AM</div>
+                  <div class="event-info">
+                    <div class="event-title">Inaugural Ceremony</div>
+
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">11.00-12.30</div>
+                  <div class="event-info">
+                    <div class="event-title">Ideastorm</div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">12.30-1.30</div>
+                  <div class="event-info">
+                    <div class="event-title highlight">Lunch</div>
+                  </div>
+                </div>
+              </div>
+              <div class="afternoon-schedule">
+                <h1
+                  style="
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                    color: #000000;
+                  ">
+                  <u style="text-decoration:none;">Afternoon</u>
+                </h1>
+                <div class="schedule-item">
+                  <div class="time">1.30-4.30</div>
+                  <div class="event-info">
+                    <div class="event-title">Ideation And MVP</div>
+                    <div class="event-details">
+                      This session guides participants in developing a Minimum
+                      <br>
+                      Viable Product (MVP)—a product version with sufficient
+                      <br>
+                      features to attract early adopters and validate key <br>
+                      assumptions.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="schedule-section section-21"
+        style="transform: translateY(-60px)">
+        <svg
+          class="wave-top-svg1"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          transform="translateY(-800px) scale(1, -1)">
+          <path
+            d="M0,0 L0,80 Q200,120 400,80 Q600,40 800,80 Q1000,120 1200,80 L1200,0 Z"
+            fill="#7574b6" />
+        </svg>
+        <svg
+          class="wave-bottom-svg"
+          viewBox="0 0 1200 150"
+          preserveAspectRatio="none">
+          <defs>
+            <lineargradient
+              id="waveGradient21"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%">
+              <stop offset="0%" style="stop-color: #ff4040; stop-opacity: 1" />
+              <stop offset="50%" style="stop-color: #ff4040; stop-opacity: 1" />
+              <stop
+                offset="100%"
+                style="stop-color: #ff4040; stop-opacity: 1" />
+            </lineargradient>
+          </defs>
+          <path
+            d="M0,150 L0,70 Q200,30 400,70 Q600,110 800,70 Q1000,30 1200,70 L1200,150 Z"
+            fill="url(#waveGradient21)" />
+        </svg>
+        <div class="decorative-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+        <div class="robot-character">
+          <div class="robot-head">
+            <div class="robot-antenna"></div>
+            <div class="robot-eyes">
+              <div class="robot-eye"></div>
+              <div class="robot-eye" style="transform: translateY(1px)"></div>
+            </div>
+            <div class="robot-mouth"></div>
+          </div>
+          <div class="robot-body">
+            <div class="robot-arms">
+              <div
+                class="robot-arm left"
+                style="transform: rotate(-20deg)"></div>
+              <div
+                class="robot-arm right"
+                style="transform: rotate(20deg)"></div>
+            </div>
+          </div>
+          <div class="tentacle-rope">
+            <div class="tentacle" style="height: 25px"></div>
+          </div>
+        </div>
+        <div class="strawberry-character1">
+          <img
+            src="/assets/engima2.svg"
+            style="width: 70%; max-width: 900px; transform: translate(-40%, 20%)" />
+        </div>
+        <div class="main-container">
+          <div class="date-section">
+            <div class="date-number">21</div>
+            <div class="date-day">Sunday</div>
+            <img
+              id="tentacle"
+              src="/assets/engima.svg"
+              style="
+                position: absolute;
+                bottom: -580px;
+                left: -50px;
+                transform: translateX(0);
+                width: 400px;
+                z-index: 1;
+              " />
+          </div>
+          <div class="schedule-content">
+            <div class="schedule-columns">
+              <div class="morning-schedule">
+                <h1
+                  style="
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                    color: #000000;
+                  ">
+                  <u style="text-decoration:none;">Morning</u>
+                </h1>
+                <div class="schedule-item">
+                  <div class="time">8:00 AM</div>
+                  <div class="event-info">
+                    <div class="event-title">Registration Opens</div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">9.30-11.00 AM</div>
+                  <div class="event-info">
+                    <div class="event-title">Design Thinking</div>
+                    <div class="event-details">
+                      This session introduces Design Thinking, a human-centered
+                      <br>
+                      approach to innovation that emphasizes empathy, <br>
+                      collaboration, and iterative problem-solving.
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">12.30-1.00 PM</div>
+                  <div class="event-info">
+                    <div class="event-title highlight">Lunch</div>
+                  </div>
+                </div>
+              </div>
+              <div class="afternoon-schedule">
+                <h1
+                  style="
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                    color: #000000;
+                  ">
+                  <u style="text-decoration:none;">Afternoon</u>
+                </h1>
+                <div class="schedule-item">
+                  <div class="time">1:30 PM - 3:00 PM</div>
+                  <div class="event-info">
+                    <div class="event-title">Pitching Deck Preparation</div>
+                    <div class="event-details">
+                      This session helps the participants prepare and deliver
+                      <br>
+                      effective pitches for their startups to potential <br>
+                      investors, customers, partners, etc.
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">3:00 PM - 4:30 PM</div>
+                  <div class="event-info">
+                    <div class="event-title">Pitch Competition</div>
+                    <div class="event-details">
+                      This is the final session of the bootcamp that showcases <br>
+                      the participants’ startups to a panel of judges or mentors <br>
+                      who evaluate and provide feedback on their pitches
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">4:30 PM - 5:00 PM</div>
+                  <div class="event-info">
+                    <div class="event-title">Closing Ceremony</div>
+                  </div>
+                </div>
+                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+   <section id="collaborators" class="collaborators">
+  <h2 >Our Collaborators</h2>
+
+  <div class="collab-wrapper">
+    <div class="collab-logos">
+      <div class="logo-item"><img src="/assets/parthers/ieee.svg" alt="Collaborator 1"></div>
+      <div class="logo-item"><img src="/assets/parthers/iste.svg" alt="Collaborator 2"></div>
+      <div class="logo-item"><img src="/assets/parthers/foss.svg" alt="Collaborator 3"></div>
+      <div class="logo-item"><img src="/assets/parthers/iedc.svg" alt="Collaborator 4"></div>
+      <div class="logo-item"><img src="/assets/parthers/tinkerhub.svg" alt="Collaborator 5"></div>
+    </div>
+
+   <div class="partners-row" style="display: flex; justify-content: center; align-items: center; gap: 50px; flex-wrap: wrap;">
+
+  <!-- Create Partner -->
+  <div class="create-partner" style="text-align: center;">
+    <h3 style="padding-top: 40px; padding-bottom: 20px;">Create Partner</h3>
+    <img src="/assets/FOSS/c101-color_light.svg" alt="Create Partner Logo" style="max-height: 60px;">
+  </div>
+
+  <!-- Food Partner -->
+  <div class="food-partner" style="text-align: center;">
+    <h3 style="padding-top: 40px; padding-bottom: 20px; color:white">Food Spomser</h3>
+    <img src="/assets/parthers/food.svg" alt="Food Partner Logo" style="max-height: 60px;">
+  </div>
+
+</div>
+
+    
+  </div>
+</section>
+
+    <!--footer-->
+    <footer id="footer"
+      style="padding:50px 0;">
+      <div class="container"
+        style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px;text-align:left">
+
+        <!-- Brand / Message -->
+        <div style="margin-left: 20px; color: white;" class="brand">
+          <div class="brand"
+            style="font-weight:800;font-family:'Playfair Display',serif;font-size:22px;">
+            ENIGMA
+          </div> <p id="copyright"><i class="far fa-copyright"></i> <span
+              id="year"></span> Train 303, IEDC. <br> All Rights
+            Reserved.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 style="margin-bottom:10px;font-size:16px">Quick
+            Links</h4>
+          <ul
+            style="list-style:none;padding:0;margin:0;line-height:1.8">
+            <li><a href="#events"
+                style="color:var(--muted);text-decoration:none;transition:.3s"
+                onmouseover="this.style.color='#fff'"
+                onmouseout="this.style.color='var(--muted)'">Enigma
+                Event Info</a></li>
+            <li><a href="#highlights"
+                style="color:var(--muted);text-decoration:none;transition:.3s"
+                onmouseover="this.style.color='#fff'"
+                onmouseout="this.style.color='var(--muted)'">Speakers
+              </a></li>
+            <li><a href="#club"
+                style="color:var(--muted);text-decoration:none;transition:.3s"
+                onmouseover="this.style.color='#fff'"
+                onmouseout="this.style.color='var(--muted)'">Schedule
+                Info</a></li>
+            <li><a href="#contact"
+                style="color:var(--muted);text-decoration:none;transition:.3s"
+                onmouseover="this.style.color='#fff'"
+                onmouseout="this.style.color='var(--muted)'">Contact
+                Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Address -->
+        <div>
+          <h4 style="margin-bottom:10px;font-size:16px">College
+            Address</h4>
+          <p
+            style="color:var(--muted);font-size:14px;line-height:1.6">
+            College of Engineering, Attingal <br>
+            Near KSRTC Busstand, Attingal P.O, <br>
+            Trivandurm, Pin - 695 101.
+          </p>
+        </div>
+
+        <!-- Social Media -->
+        <div id="socials">
+          <h4 style="margin-bottom:10px;font-size:16px">Follow
+            Us</h4>
+          <div class="social-icons"
+            style="display:flex;gap:15px;font-size:20px">
+            <a href="https://www.instagram.com/alchemy_iedcceal/"
+              aria-label="Instagram"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://discord.gg/R9J4uftN5z"
+              aria-label="Discord"><i
+                class="fab fa-discord"></i></a>
+          </div>
+        </div>
+          <!-- Phone Numbers -->
+        <div id="footer-phones">
+          <h4 style="margin-bottom:10px;font-size:16px">Contact Numbers</h4>
+          <ul style="list-style:none;padding:0;margin:0;line-height:1.8">
+            <li><a href="#" class="phone-link" data-number="+918848686924"><strong>Nihal</strong>: +91 88486 86924</a></li>
+            <li><a href="#" class="phone-link" data-number="+917510785122"><strong>Nandana</strong>: +91 75107 85122</a></li>
+            <li><a href="#" class="phone-link" data-number="+918281854471"><strong>Arshad</strong>: +91 82818 54471</a></li>
+            <li><a href="mailto:iedc@ceattingal.ac.in"><strong>Emial :</strong> iedc@ceattingal.ac.in</a></li>
+          </ul>
+          <script src="/index.js"></script>
+        </div>
+      </div>
+ 
+
+      <!-- Bottom Bar -->
+      <div style="text-align:center;margin-top:30px">
+        <a href="#home"
+          style="font-size:14px;color:var(--muted);text-decoration:none;transition:.3s"
+          onmouseover="this.style.color='#fff'"
+          onmouseout="this.style.color='var(--muted)'">
+          ↑ Back to Top
+        </a>
+        <p id="copyright-btm"
+          style="padding-top: 20px; text-align: center; padding-bottom: 60px; transform: translateY(10px);">
+          <i class="far fa-copyright"></i> <span id="year"></span> Train 303,
+          IEDC. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

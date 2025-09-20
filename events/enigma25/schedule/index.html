@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Schedule</title>
+    <link rel="stylesheet" href="/schedule/styles.css" />
+  </head>
+  <body>
+    <div class="schedule-container">
+      <section class="schedule-section section-20">
+        <svg
+          class="wave-top-svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,0 L0,80 Q200,120 400,80 Q600,40 800,80 Q1000,120 1200,80 L1200,0 Z"
+            fill="#2D3748"
+          />
+        </svg>
+        <svg
+          class="wave-bottom-svg"
+          viewBox="0 0 1200 150"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient
+              id="waveGradient20"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="0%" style="stop-color: #ff9a9e; stop-opacity: 1" />
+              <stop offset="50%" style="stop-color: #fecfef; stop-opacity: 1" />
+              <stop
+                offset="100%"
+                style="stop-color: #fecfef; stop-opacity: 1"
+              />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,150 L0,70 Q200,30 400,70 Q600,110 800,70 Q1000,30 1200,70 L1200,150 Z"
+            fill="url(#waveGradient20)"
+          />
+        </svg>
+        <div class="decorative-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+        <div class="robot-character">
+          <div class="robot-head">
+            <div class="robot-antenna"></div>
+            <div class="robot-eyes">
+              <div class="robot-eye"></div>
+              <div class="robot-eye"></div>
+            </div>
+            <div class="robot-mouth"></div>
+          </div>
+          <div class="robot-body">
+            <div class="robot-arms">
+              <div class="robot-arm left"></div>
+              <div class="robot-arm right"></div>
+            </div>
+          </div>
+          <div class="tentacle-rope">
+            <div class="tentacle"></div>
+          </div>
+        </div>
+        <div class="strawberry-character">
+          <img
+            src="/assets/strawberry.svg"
+            style="width: 100%; max-width: 100px; transform: translateY(20%)"
+          />
+        </div>
+        <div class="main-container">
+          <div class="date-section">
+            <div class="date-number">20</div>
+            <div class="date-day">Saturday</div>
+            <img
+              id="tentacle"
+              src="/assets/enigmaelement.svg"
+              style="
+                position: absolute;
+                bottom: -600px;
+                left: -210px;
+                transform: translateX(0);
+                width: 1000px;
+                z-index: 1;
+              "
+            />
+          </div>
+          <div class="schedule-content">
+            <div class="schedule-columns">
+              <div class="morning-schedule">
+                <h1
+                  style="
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                    color: #abff23;
+                    text-shadow: 0 0 10px #ff69b4;
+                  "
+                >
+                  <u>Morning</u>
+                </h1>
+                <div class="schedule-item">
+                  <div class="time">8:00 AM</div>
+                  <div class="event-info">
+                    <div class="event-title">Registration Opens</div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">9:00 AM</div>
+                  <div class="event-info">
+                    <div class="event-title">Workshops</div>
+                    <div class="event-details">
+                      Alex Adams<br />
+                      TBC - Marisa Burgett<br />
+                      Matt Dawson
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">11:00 AM</div>
+                  <div class="event-info">
+                    <div class="event-title highlight">Lunch</div>
+                  </div>
+                </div>
+              </div>
+              <div class="afternoon-schedule">
+                <h1
+                  style="
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                    color: #d48919;
+                    text-shadow: 0 0 10px #000000;
+                  "
+                >
+                  <u>Afternoon</u>
+                </h1>
+                <div class="schedule-item">
+                  <div class="time">12:30 PM</div>
+                  <div class="event-info">
+                    <div class="event-title">Workshops / Vendor Load-In</div>
+                    <div class="event-details">
+                      Anderson Bluu<br />
+                      Michael Fugoso<br />
+                      Jimmy Bryant
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">3:00 PM</div>
+                  <div class="event-info">
+                    <div class="event-title">Workshops</div>
+                    <div class="event-details">
+                      Jeremy Slagle<br />
+                      TBC - Kenzi Green<br />
+                      Steven Wakabayashi
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">6:00 PM</div>
+                  <div class="event-info">
+                    <div class="event-title">Registration Closes</div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">7:00 PM</div>
+                  <div class="event-info">
+                    <div class="event-title">Bridge Party</div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">12:00 AM</div>
+                  <div class="event-info">
+                    <div class="event-title">Venue Closes</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="schedule-section section-21"
+        style="transform: translateY(-60px)"
+      >
+        <svg
+          class="wave-top-svg1"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          transform="translateY(-800px) scale(1, -1)"
+        >
+          <path
+            d="M0,0 L0,80 Q200,120 400,80 Q600,40 800,80 Q1000,120 1200,80 L1200,0 Z"
+            fill="#7574b6"
+          />
+        </svg>
+        <svg
+          class="wave-bottom-svg"
+          viewBox="0 0 1200 150"
+          preserveAspectRatio="none"
+        >
+          <defs>
+            <linearGradient
+              id="waveGradient21"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="0%" style="stop-color: #ff4040; stop-opacity: 1" />
+              <stop offset="50%" style="stop-color: #ff4040; stop-opacity: 1" />
+              <stop
+                offset="100%"
+                style="stop-color: #ff4040; stop-opacity: 1"
+              />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,150 L0,70 Q200,30 400,70 Q600,110 800,70 Q1000,30 1200,70 L1200,150 Z"
+            fill="url(#waveGradient21)"
+          />
+        </svg>
+        <div class="decorative-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+        <div class="robot-character">
+          <div class="robot-head">
+            <div class="robot-antenna"></div>
+            <div class="robot-eyes">
+              <div class="robot-eye"></div>
+              <div class="robot-eye" style="transform: translateY(1px)"></div>
+            </div>
+            <div class="robot-mouth"></div>
+          </div>
+          <div class="robot-body">
+            <div class="robot-arms">
+              <div
+                class="robot-arm left"
+                style="transform: rotate(-20deg)"
+              ></div>
+              <div
+                class="robot-arm right"
+                style="transform: rotate(20deg)"
+              ></div>
+            </div>
+          </div>
+          <div class="tentacle-rope">
+            <div class="tentacle" style="height: 25px"></div>
+          </div>
+        </div>
+        <div class="strawberry-character1">
+          <img
+            src="/assets/engima2.svg"
+            style="width: 100%; max-width: 900px; transform: translateY(20%)"
+          />
+        </div>
+        <div class="main-container">
+          <div class="date-section">
+            <div class="date-number">21</div>
+            <div class="date-day">Sunday</div>
+            <img
+              id="tentacle"
+              src="/assets/engima.svg"
+              style="
+                position: absolute;
+                bottom: -580px;
+                left: -50px;
+                transform: translateX(0);
+                width: 500px;
+                z-index: 1;
+              "
+            />
+          </div>
+          <div class="schedule-content">
+            <div class="schedule-columns">
+              <div class="morning-schedule">
+                <h1
+                  style="
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                    color: #abff23;
+                    text-shadow: 0 0 10px #ff69b4;
+                  "
+                >
+                  <u>Morning</u>
+                </h1>
+                <div class="schedule-item">
+                  <div class="time">8:00 AM</div>
+                  <div class="event-info">
+                    <div class="event-title">Registration Opens</div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">9:00 AM</div>
+                  <div class="event-info">
+                    <div class="event-title">Workshops</div>
+                    <div class="event-details">
+                      Alex Adams<br />
+                      TBC - Marisa Burgett<br />
+                      Matt Dawson
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">11:00 AM</div>
+                  <div class="event-info">
+                    <div class="event-title highlight">Lunch</div>
+                  </div>
+                </div>
+              </div>
+              <div class="afternoon-schedule">
+                <h1
+                  style="
+                    margin-bottom: 1rem;
+                    font-size: 3rem;
+                    color: #d48919;
+                    text-shadow: 0 0 10px #000000;
+                  "
+                >
+                  <u>Afternoon</u>
+                </h1>
+                <div class="schedule-item">
+                  <div class="time">12:30 PM</div>
+                  <div class="event-info">
+                    <div class="event-title">Workshops / Vendor Load-In</div>
+                    <div class="event-details">
+                      Anderson Bluu<br />
+                      Michael Fugoso<br />
+                      Jimmy Bryant
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">3:00 PM</div>
+                  <div class="event-info">
+                    <div class="event-title">Workshops</div>
+                    <div class="event-details">
+                      Jeremy Slagle<br />
+                      TBC - Kenzi Green<br />
+                      Steven Wakabayashi
+                    </div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">6:00 PM</div>
+                  <div class="event-info">
+                    <div class="event-title">Registration Closes</div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">7:00 PM</div>
+                  <div class="event-info">
+                    <div class="event-title">Bridge Party</div>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="time">12:00 AM</div>
+                  <div class="event-info">
+                    <div class="event-title">Venue Closes</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  </head>
+
+  <footer class="foot-main">
+    <img id="im-1" src="./svg/svg-image-113.svg" alt>
+    <div class="foot-1">
+      <div class="foot-left">
+        <p id="f-h"><span class="copyright">&copy;</span> UNRAVEL 2025 </p>
+        <a href="http://">View Events</a>
+        <a href="http://">Volunteers</a>
+        <a href="http://">Lorem ipsum</a>
+      </div>
+      <div class="foot-right">
+        <a href="https://www.facebook.com/YourProfile" target="_blank">
+          <i class="bi bi-facebook"></i>
+        </a>
+
+        <a href="https://twitter.com/YourProfile" target="_blank">
+          <i class="bi bi-twitter-x"></i>
+        </a>
+
+        <a href="https://www.instagram.com/YourProfile" target="_blank">
+          <i class="bi bi-instagram"></i>
+        </a>
+
+        <a href="https://discord.gg/YourServer" target="_blank">
+          <i class="bi bi-discord"></i>
+        </a>
+      </div>
+      <div class="copyright">
+        <p>
+          <i class="fa-regular fa-copyright"></i>
+          Copyright
+          <strong><span id="yr"></span></strong>. All
+          Rights Reserved
+        </p>
+      </div>
+      <script>
+        document.getElementById("yr").innerHTML = new Date().getFullYear();
+      </script>
+    </div>
+  </footer>
+</html>

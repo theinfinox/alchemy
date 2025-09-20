@@ -1099,11 +1099,11 @@ a:hover::after {
   cursor: default;
 }
 
-.teamPage {
+/* .teamPage {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 250px);
+  grid-template-rows: repeat(13, 250px);
   grid-gap: 12px;
   height: 120vh;
   color: #fff;
@@ -1113,7 +1113,57 @@ a:hover::after {
   transform: translateX(-50%);
   flex-direction: row;
   width: 98vw;
+} */
+
+.teamPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  /* top: 8vh; */
+  padding-bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 98vw;
+  color: #fff;
 }
+
+.snrTeamPage {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 250px);
+  grid-gap: 12px;
+  width: 100%;
+  height: auto;
+}
+
+.jnrTeamPage {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(9, 250px);
+  grid-gap: 12px;
+  width: 100%;
+  height: auto;
+  margin-top: 1vh;
+}
+
+.teamPage .snrTitle {
+  font-size: 5vw;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5vh;
+}
+
+.teamPage .jnrTitle {
+  font-size: 5vw;
+  font-weight: bold;
+  text-align: center;
+  margin: 5vh 0;
+}
+
 .teamBox {
   display: flex;
   flex-direction: row;
@@ -1132,7 +1182,7 @@ a:hover::after {
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.r2 {
+.teamBoxN {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -1140,7 +1190,7 @@ a:hover::after {
   align-items: center;
   height: 100%;
   width: 100%;
-  background: #ff0000;
+  background: #000000;
   border-radius: 24px;
   /* padding: 12px; */
   gap: 12px;
@@ -1172,8 +1222,15 @@ a:hover::after {
 .r1 {
   background: #0088ff;
 }
+.r2 {
+  background: #ff0000;
+}
 .r3 {
   background: rgb(57, 255, 143);
+}
+
+.r4 {
+  background: rgb(255, 174, 0);
 }
 
 .r1 .r2 .r3 .r4 .double {
@@ -1209,7 +1266,7 @@ a:hover::after {
   transition: 400ms;
 }
 /* <-------------------------------> */
-.r2 > h1 {
+.teamBoxN > h1 {
   text-align: center;
   width: 100%;
   position: absolute;
@@ -1219,7 +1276,7 @@ a:hover::after {
   transition: 400ms;
   filter: blur(3px);
 }
-.r2 > h4 {
+.teamBoxN > h4 {
   text-align: center;
   width: 100%;
   position: absolute;
@@ -1230,7 +1287,7 @@ a:hover::after {
   transition: 400ms;
   filter: blur(3px);
 }
-.r2 > img {
+.teamBoxN > img {
   position: absolute;
   z-index: 4;
   left: 50%;
@@ -1315,7 +1372,7 @@ a:hover::after {
 }
 
 /* <------------------------> */
-.r2:hover > img,
+.teamBoxN:hover > img,
 .r2Focus > img {
   transform: translateX(-102%);
   filter: blur(3px);
@@ -1341,20 +1398,20 @@ a:hover::after {
   scale: 1.1;
 }
 
-.r2:hover > h1,
+.teamBoxN:hover > h1,
 .r2Focus > h1 {
   opacity: 1;
   transform: translateX(-40%);
   filter: blur(0px);
 }
-.r2:hover > h4,
+.teamBoxN:hover > h4,
 .r2Focus > h4 {
   opacity: 1;
   transform: translate(-40%, 170%);
   filter: blur(0px);
 }
 
-.r2 > img:hover,
+.teamBoxN > img:hover,
 .teamBox > img:hover,
 .double > #Aswin:hover,
 .double > #Gokul:hover,
@@ -1619,8 +1676,18 @@ a:hover::after {
 
   .teamPage {
     /* one per row */
-    grid-template-columns: 90%;
-    grid-template-rows: repeat(10, 250px);
+    grid-template-columns: 80%;
+    grid-template-rows: repeat(2, 250px);
+  }
+
+  .snrTeamPage {
+    grid-template-columns: 80%;
+    grid-template-rows: repeat(13, 250px);
+  }
+
+  .jnrTeamPage {
+    grid-template-columns: 80%;
+    grid-template-rows: repeat(25, 250px);
   }
 
   .inaara-wrapper{
